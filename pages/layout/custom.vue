@@ -23,7 +23,7 @@ definePageMeta({
 
 const layoutName = ref('custom-first')
 function tap(type) {
-  if (type == 1) layoutName.value = 'default'
+  if (type === 1) layoutName.value = 'default'
   else layoutName.value = 'custom-first'
 }
 </script>

@@ -1,15 +1,11 @@
 <template>
-  <div>
-    <div>
-      <div class="app-color-blue app-cursor" @click="home">返回首页</div>
-      <h1>异常处理之全局错误页面的示例。</h1>
-      <div class="app-color-grey">
-        当Nuxt3遇到致命错误时，统一跳转到此全局错误页面进行异常处理。
-      </div>
-      <div>异常数据：</div>
-      <div class="app-box">
-        <pre>{{ JSON.stringify(error, null, 2) }}</pre>
-      </div>
+  <div class="error-box">
+    <div class="app-color-blue app-cursor" @click="home">返回首页</div>
+    <h1>异常处理之全局错误页面的示例。</h1>
+    <div class="app-color-grey">当Nuxt3遇到致命错误时，统一跳转到此全局错误页面进行异常处理。</div>
+    <div>异常数据：</div>
+    <div class="app-box">
+      <pre>{{ JSON.stringify(error, null, 2) }}</pre>
     </div>
   </div>
 </template>

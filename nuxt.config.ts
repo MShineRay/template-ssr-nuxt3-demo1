@@ -65,11 +65,19 @@ export default defineNuxtConfig({
   // components: [
   //   {
   //     global: true,
-  //     dirs: ['~/components/global']
-  //   }
+  //     dirs: ['~/components/global'],
+  //   },
   // ],
   imports: {
-    dirs: ['composables/**'],
+    // dirs: ['composables/**'],
+    dirs: [
+      // 扫描顶级模块
+      // 'composables',
+      // ... 或扫描带有特定名称和文件扩展名的一级嵌套模块
+      // 'composables/*/index.{ts,js,mjs,mts}',
+      // ... 或扫描给定目录中的所有模块
+      'composables/**',
+    ],
   },
   vite: {
     css: {
