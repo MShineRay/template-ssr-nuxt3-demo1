@@ -2,6 +2,7 @@
   <NuxtLayout>
     <div class="app-box">
       <NuxtPage />
+      <h1>全局的？？？</h1>
     </div>
   </NuxtLayout>
 </template>
