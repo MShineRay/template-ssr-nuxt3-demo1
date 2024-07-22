@@ -49,4 +49,3 @@
   transform: rotate3d(1, 1, 1, 15deg);
 }
 </style>
-<script setup lang="ts"></script>

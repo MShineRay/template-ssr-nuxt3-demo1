@@ -1,3 +1,4 @@
+// @ts-ignore
 import type { RouterConfig } from '@nuxt/schema'
 
 export default <RouterConfig>{
@@ -6,6 +7,7 @@ export default <RouterConfig>{
       {
         name: 'route-custom-my-wel',
         path: '/route/custom/my/wel',
+        // @ts-ignore
         component: () => import('~/pages/route/custom/welcome.vue'),
         meta: {
           middleware: ['logging'],
@@ -15,6 +17,7 @@ export default <RouterConfig>{
       {
         name: 'index.html',
         path: '/index.html',
+        // @ts-ignore
         component: () => import('~/pages/index.vue'),
       },
     ]
