@@ -9,7 +9,9 @@ export default defineNuxtConfig({
     // 'bootstrap-icons/font/bootstrap-icons.scss',
     'ant-design-vue/dist/antd.css',
   ],
+
   modules: ['@nuxt/content', '@nuxtjs/color-mode'],
+
   app: {
     baseURL,
 
@@ -49,6 +51,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   // 如果您希望仅根据组件名称而不是路径自动导入组件，则需要使用扩展形式的配置对象将 pathPrefix 选项设置为false
   // 这将使用与 Nuxt 2 中使用的相同策略注册组件。
   // 例如，~/components/Some/MyComponent.vue 将可用作 <MyComponent> 而不是 <SomeMyComponent>。
@@ -79,6 +82,7 @@ export default defineNuxtConfig({
       'composables/**',
     ],
   },
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -88,4 +92,6 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  compatibilityDate: '2024-07-22',
 })
