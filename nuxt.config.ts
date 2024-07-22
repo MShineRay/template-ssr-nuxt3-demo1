@@ -108,4 +108,8 @@ export default defineNuxtConfig({
     // '~/plugins/bar/baz',
     // '~/plugins/bar/foz'
   ],
+  experimental: {
+    // Nuxt提供了`<NuxtClientFallback>`组件，用于在客户端渲染其内容，如果其任何子组件在SSR中触发错误。
+    clientFallback: true,
+  },
 })
