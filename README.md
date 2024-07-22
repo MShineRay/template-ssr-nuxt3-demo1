@@ -4,6 +4,8 @@
 
 ## TODO
 
+- 部署
+
 ## Reference
 
 - [nuxt](https://nuxt.com.cn/docs/guide/directory-structure/pages)
