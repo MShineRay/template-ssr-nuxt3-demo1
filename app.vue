@@ -25,6 +25,8 @@
           fallbackTag，以便在服务器端无法渲染时渲染特定的标记。
         </p>
       </NuxtClientFallback>
+
+      <Hello></Hello>
     </NuxtLayout>
   </div>
 </template>
@@ -49,3 +51,6 @@
   transform: rotate3d(1, 1, 1, 15deg);
 }
 </style>
+<script setup lang="ts">
+import Hello from '~/components/Hello.vue'
+</script>

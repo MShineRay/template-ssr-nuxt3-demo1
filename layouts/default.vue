@@ -2,6 +2,7 @@
   <div class="app-box">
     <AppNav></AppNav>
     <div>默认布局。</div>
+    <NuxtLink to="/">返回首页</NuxtLink>
     <slot />
   </div>
 </template>

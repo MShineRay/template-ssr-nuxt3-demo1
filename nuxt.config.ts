@@ -94,4 +94,18 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2024-07-22',
+
+  // 只有目录的顶层文件（或任何子目录中的索引文件）才会自动注册为插件。
+  //   -| plugins/
+  //   ---| foo.ts      // 被扫描
+  //   ---| bar/
+  //   -----| baz.ts    // 不被扫描
+  //   -----| foz.vue   // 不被扫描
+  //   -----| index.ts  // 目前被扫描，但已弃用
+  // 只有foo.ts和bar/index.ts会被注册。
+  // 要在子目录中添加插件，你可以在nuxt.config.ts的plugins选项中使用：
+  plugins: [
+    // '~/plugins/bar/baz',
+    // '~/plugins/bar/foz'
+  ],
 })
