@@ -3,6 +3,7 @@
     <div class="app-box">
       <NuxtPage />
       <h1>全局的？？？</h1>
+      <!--      <Comments/>-->
     </div>
   </NuxtLayout>
 </template>

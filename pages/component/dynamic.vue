@@ -10,11 +10,11 @@
         >显示页脚组件</span
       >
     </div>
-    <component :is="isLink ? BaseFooLink : TheFooter" />
+    <component :is="isLink ? BaseFooLink : AppFooter" />
   </div>
 </template>
 <script setup>
 const BaseFooLink = resolveComponent('BaseFooLink')
-const TheFooter = resolveComponent('TheFooter')
+const AppFooter = resolveComponent('AppFooter')
 const isLink = ref(true)
 </script>

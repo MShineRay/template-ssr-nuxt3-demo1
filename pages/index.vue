@@ -9,6 +9,7 @@
       </NuxtLink>
       <span class="app-margin-left-s app-color-grey">{{ item.description }}</span>
     </div>
+    <!--    <Comments/>-->
   </div>
 </template>
 <script setup>

@@ -1,5 +1,6 @@
 import headConfig from './assets/data/head.js'
 const baseURL = '/'
+// @ts-ignore
 export default defineNuxtConfig({
   // routeRules: {},
   css: [
@@ -48,12 +49,25 @@ export default defineNuxtConfig({
       ],
     },
   },
-  /* 全局动态引用组件，页面无需resolveComponent，不推荐
-  components: {
-    global: true,
-    dirs: ['~/components']
-  },
-  */
+  // 如果您希望仅根据组件名称而不是路径自动导入组件，则需要使用扩展形式的配置对象将 pathPrefix 选项设置为false
+  // 这将使用与 Nuxt 2 中使用的相同策略注册组件。
+  // 例如，~/components/Some/MyComponent.vue 将可用作 <MyComponent> 而不是 <SomeMyComponent>。
+  // components: [
+  //   {
+  //     path: '~/components',
+  //     pathPrefix: false,
+  //   },
+  // ],
+
+  // 虽然不推荐，但您可以全局注册所有组件，这将为所有组件创建异步块，并使它们在整个应用程序中可用。
+  // 您还可以通过将它们放置在 ~/components/global 目录中来有选择地全局注册一些组件。
+  // global 选项也可以针对每个组件目录进行设置。
+  // components: [
+  //   {
+  //     global: true,
+  //     dirs: ['~/components/global']
+  //   }
+  // ],
   imports: {
     dirs: ['composables/**'],
   },

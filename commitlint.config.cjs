@@ -23,18 +23,14 @@ module.exports = {
         'build', // 影响构建系统或外部依赖关系的提交
         'ci', // 对CI配置文件和脚本的更改
         'chore', // 其他改动（构建过程或辅助工具的变动）
-        'revert' // 代码回滚
+        'revert', // 代码回滚
       ],
     ],
     'scope-empty': [0, 'never'], // 范围不得为空
-    'subject-case': [
-      0,
-      'never',
-      ['sentence-case', 'start-case', 'pascal-case', 'upper-case'],
-    ],
+    'subject-case': [0, 'never', ['sentence-case', 'start-case', 'pascal-case', 'upper-case']],
     'subject-full-stop': [2, 'never', '.'], // 主题末尾不得有句号
     'subject-empty': [2, 'never'], // 主题不得为空
     'type-empty': [2, 'never'], // 提交信息的类型部分不能为空
     'header-max-length': [2, 'always', 200], // 提交信息首行不得超过200个字符
   },
-};
+}

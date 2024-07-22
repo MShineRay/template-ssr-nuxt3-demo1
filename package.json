@@ -1,0 +1,72 @@
+{
+  "name": "template-ssr-nuxt3-demo1",
+  "version": "1.0.0",
+  "title": "",
+  "description": "",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "server": "node ./.output/server/index.mjs",
+    "lint:style": "stylelint \"./**/*.{vue,less,css,scss}\" --fix",
+    "format": "prettier --write \"./**/*.{html,vue,ts,js,cjs,json,md}\"",
+    "lint": "eslint --fix",
+    "prepare:mac": "husky install && pnpm init-pre-commit && pnpm init-commit-msg && chmod ug+x .husky/* && chmod ug+x .git/hooks/*",
+    "prepare:window": "husky install && pnpm init-pre-commit && pnpm init-commit-msg",
+    "init-pre-commit": "npx husky add .husky/pre-commit \"npx lint-staged\"",
+    "init-commit-msg": "npx husky add .husky/commit-msg \"npx --no-install commitlint --edit\""
+  },
+  "devDependencies": {
+    "@commitlint/cli": "12.1.1",
+    "@commitlint/config-conventional": "12.1.1",
+    "@nuxt/content": "^2.2.2",
+    "@nuxtjs/color-mode": "^3.1.8",
+    "@typescript-eslint/eslint-plugin": "^7.16.1",
+    "@typescript-eslint/parser": "^7.16.1",
+    "eslint": "9.7.0",
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3",
+    "nuxt": "3.12.4",
+    "postcss": "8.4.23",
+    "postcss-html": "1.5.0",
+    "postcss-less": "6.0.0",
+    "prettier": "2.2.1",
+    "sass": "^1.56.1",
+    "stylelint": "15.10.2",
+    "stylelint-config-prettier": "9.0.5",
+    "stylelint-config-recommended-less": "1.0.4",
+    "stylelint-config-standard": "33.0.0",
+    "stylelint-config-standard-vue": "1.0.0",
+    "stylelint-less": "1.0.6",
+    "stylelint-order": "6.0.3"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "ant-design-vue": "^3.2.15",
+    "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.10.2"
+  },
+  "keywords": [
+    "nuxt3",
+    "vue3",
+    "ssr",
+    "csr",
+    "pm2",
+    "antd",
+    "bootstrap",
+    "frontend"
+  ],
+  "homepage": "",
+  "peerDependencies": {
+    "nuxt": ">=3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "lint-staged": {
+    "*.{html,vue,ts,js,json,md}": "prettier --write"
+  },
+  "license": "MIT"
+}

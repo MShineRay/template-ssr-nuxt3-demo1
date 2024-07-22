@@ -1,11 +1,13 @@
 <template>
   <div class="app-box">
+    <AppNav></AppNav>
     <div>默认布局。</div>
     <slot />
   </div>
 </template>
 <script setup>
 import headConfig from '~/assets/data/head.js'
+import AppNav from '~/components/global/AppNav.vue'
 
 const route = useRoute()
 const head = route.meta.head || {}
