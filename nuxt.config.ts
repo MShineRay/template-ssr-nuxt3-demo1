@@ -1,4 +1,5 @@
 import headConfig from './assets/data/head.js'
+import pkg from './package.json'
 const baseURL = '/'
 // @ts-ignore
 export default defineNuxtConfig({
@@ -34,6 +35,12 @@ export default defineNuxtConfig({
         { property: 'og:title', content: headConfig.data.title },
         { property: 'og:keywords', content: headConfig.data.keywords },
         { property: 'og:description', content: headConfig.data.description },
+        { name: 'fe-app-name', content: pkg.name },
+        { name: 'fe-app-version', content: pkg.version },
+        // @ts-ignore
+        { name: 'fe-app-env', content: process.env.APP_NODE_ENV },
+        // @ts-ignore
+        // { name: 'fe-app-env', content: JSON.stringify(process.env) },
       ],
       link: [
         { rel: 'shortcut icon', href: baseURL + 'favicon.ico', type: 'image/x-icon' },

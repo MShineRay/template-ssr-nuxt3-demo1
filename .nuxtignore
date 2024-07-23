@@ -1,0 +1,1 @@
+# .nuxtignore 文件告诉 Nuxt 在构建阶段忽略项目根目录下的文件（rootDir）
