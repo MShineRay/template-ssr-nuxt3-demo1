@@ -1,5 +1,4 @@
-// @ts-ignore
-export default defineEventHandler((event) => {
+export default defineEventHandler((event: any) => {
   console.log('[auth]')
   event.context.auth = { user: 123 }
 })

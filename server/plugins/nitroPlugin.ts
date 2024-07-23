@@ -1,4 +1,3 @@
-// @ts-ignore
-export default defineNitroPlugin((nitroApp) => {
+export default defineNitroPlugin((nitroApp: any) => {
   console.log('Nitro plugin', nitroApp)
 })

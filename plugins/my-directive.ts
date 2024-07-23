@@ -5,12 +5,10 @@
  */
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive('focus', {
-    // @ts-ignore
-    mounted(el) {
+    mounted(el: any) {
       el.focus()
     },
-    // @ts-ignore
-    getSSRProps(binding, vnode) {
+    getSSRProps(binding: any, vnode: any) {
       // 你可以在这里提供SSR特定的props
       return {}
     },

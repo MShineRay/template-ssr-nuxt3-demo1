@@ -4,8 +4,7 @@ import type { EventHandler, EventHandlerRequest } from 'h3'
 export const defineWrappedResponseHandler = <T extends EventHandlerRequest, D>(
   handler: EventHandler<T, D>,
 ): EventHandler<T, D> =>
-  // @ts-ignore
-  defineEventHandler<T>(async (event) => {
+  defineEventHandler<T>(async (event: any) => {
     try {
       // 在路由处理程序之前执行某些操作
       const response = await handler(event)
