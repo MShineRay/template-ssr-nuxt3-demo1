@@ -2,6 +2,14 @@ import headConfig from './assets/data/head.js'
 import pkg from './package.json'
 const baseURL = '/'
 // @ts-ignore
+import { fileURLToPath } from 'url'
+// @ts-ignore
+import { dirname, join } from 'path'
+
+// @ts-ignore
+const currentDir = dirname(fileURLToPath(import.meta.url))
+console.log('currentDir: ', currentDir)
+// @ts-ignore
 export default defineNuxtConfig({
   // routeRules: {},
   css: [
@@ -119,4 +127,17 @@ export default defineNuxtConfig({
     // Nuxt提供了`<NuxtClientFallback>`组件，用于在客户端渲染其内容，如果其任何子组件在SSR中触发错误。
     clientFallback: true,
   },
+  // Nuxt钩子（构建时）
+  hooks: {
+    close: () => {
+      console.log('[nuxt.config.ts] hooks close')
+    },
+  },
+
+  //在服务器构建中，默认启用了源码映射，在开发模式下，客户端构建也启用了源码映射。但你可以在配置中更具体地启用它们。
+  // 或者 sourcemap: true
+  // sourcemap: {
+  //   server: true,
+  //   client: true
+  // }
 })
