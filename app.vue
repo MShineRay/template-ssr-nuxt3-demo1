@@ -2,6 +2,8 @@
   <div class="app">
     <NuxtLayout>
       <div class="app-box">
+        <!--在页面导航之间显示一个进度条。-->
+        <NuxtLoadingIndicator color="red" />
         <NuxtPage />
         <h1>全局的？？？</h1>
         <Comments />
