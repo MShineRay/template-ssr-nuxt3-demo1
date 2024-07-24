@@ -29,9 +29,23 @@
       </NuxtClientFallback>
 
       <Hello></Hello>
+
+      <button @click="open = true">打开模态框</button>
+      <Teleport to="body">
+        <div v-if="open" class="modal">
+          <p>来自模态框的问候！</p>
+          <button @click="open = false">关闭</button>
+        </div>
+      </Teleport>
     </NuxtLayout>
   </div>
 </template>
+
+<script setup lang="ts">
+import Hello from '~/components/Hello.vue'
+const open = ref(false)
+</script>
+
 <style lang="css">
 .page-enter-active,
 .page-leave-active {
@@ -52,7 +66,14 @@
   opacity: 0;
   transform: rotate3d(1, 1, 1, 15deg);
 }
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 </style>
-<script setup lang="ts">
-import Hello from '~/components/Hello.vue'
-</script>
