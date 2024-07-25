@@ -4,8 +4,9 @@ const baseURL = '/'
 // @ts-ignore
 import { fileURLToPath } from 'url'
 // @ts-ignore
-import { dirname, join } from 'path'
-
+import { dirname, join, resolve } from 'path'
+// @ts-ignore
+import fs from 'fs'
 // @ts-ignore
 const currentDir = dirname(fileURLToPath(import.meta.url))
 console.log('currentDir: ', currentDir)
@@ -140,4 +141,10 @@ export default defineNuxtConfig({
   //   server: true,
   //   client: true
   // }
+  server: {
+    https: {
+      key: fs.readFileSync(resolve(__dirname, 'cert.key')),
+      cert: fs.readFileSync(resolve(__dirname, 'cert.crt')),
+    },
+  },
 })
