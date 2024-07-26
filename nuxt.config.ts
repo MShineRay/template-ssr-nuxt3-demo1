@@ -29,8 +29,11 @@ export default defineNuxtConfig({
 
     layoutTransition: { name: 'rotate', mode: 'out-in' },
     head: {
-      charset: 'utf-16',
-      viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
+      // charset: 'utf-8',
+      // MDN|bing|nuxt: <meta name="viewport" content="width=device-width,initial-scale=1">
+      viewport: 'width=device-width, initial-scale=1',
+      // vant-ui <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+      // element <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
       title: headConfig.data.title,
       htmlAttrs: {
         lang: 'zh',
