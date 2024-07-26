@@ -6,6 +6,7 @@
   "scripts": {
     "generate:cert": "npm install -g mkcert && mkcert create-ca && mkcert create-cert",
     "dev:test": "nuxt dev --dotenv .env.local_test --https --ssl-cert ./cert.crt --ssl-key ./cert.key",
+    "dev:test-http": "nuxt dev --dotenv .env.local_test",
     "dev:pre": "nuxt dev --dotenv .env.local_pre",
     "dev:prod": "nuxt dev --dotenv .env.local_prod",
     "build:test": "nuxt build --dotenv .env.test",

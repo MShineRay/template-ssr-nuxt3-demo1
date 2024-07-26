@@ -4,6 +4,13 @@
 
 ## TODO
 
+- 多布局
+- 多语言
+- 多主题
+  - 默认 浅色 default/light
+  - 黑色 dark
+- 集成第三 UI 库
+- 数据获取
 - eslint
 - 部署
 
