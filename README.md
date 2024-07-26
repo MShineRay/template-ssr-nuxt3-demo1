@@ -1,6 +1,13 @@
 # template-ssr-nuxt3-demo1
 
-##
+## 布局容器
+
+- header
+- aside
+  - left-side
+  - main
+  - right-side
+- footer
 
 ## TODO
 
@@ -27,5 +34,5 @@
 - [stylelint](https://www.stylelint.cn/)
 - [element-plus](https://element-plus.org/zh-CN/guide/installation.html)
 - [vant](https://vant-ui.github.io/vant/#/zh-CN/)
-
+- [normalize.css](https://github.com/necolas/normalize.css)
 - [pm2 中文网](https://pm2.fenxianglu.cn/docs/start)

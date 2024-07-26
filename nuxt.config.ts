@@ -48,12 +48,13 @@ export default defineNuxtConfig({
         { name: 'fe-app-version', content: pkg.version },
         // @ts-ignore
         { name: 'fe-app-env', content: process.env.APP_NODE_ENV },
-        // @ts-ignore
-        // { name: 'fe-app-env', content: JSON.stringify(process.env) },
+        { name: 'fe-app-bt', content: new Date().toLocaleString() }, // fe-app-build-time
       ],
       link: [
         { rel: 'shortcut icon', href: baseURL + 'favicon.ico', type: 'image/x-icon' },
-        { rel: 'stylesheet', href: '/resource/css/resource.css' },
+        { rel: 'stylesheet', href: '/resource/css/reset.css' }, //
+        { rel: 'stylesheet', href: '/resource/css/common.css' }, //
+        { rel: 'stylesheet', href: '/resource/css/resource.css' }, // /public/resource/css/resource.css
         /* 客户端引用bootstrap方式，不推荐
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css', integrity: 'sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi', crossorigin: 'anonymous' },
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css', integrity: '', crossorigin: 'anonymous' },
