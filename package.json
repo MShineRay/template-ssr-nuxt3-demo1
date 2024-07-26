@@ -27,10 +27,12 @@
   "devDependencies": {
     "@commitlint/cli": "12.1.1",
     "@commitlint/config-conventional": "12.1.1",
+    "@element-plus/nuxt": "^1.0.9",
     "@nuxt/content": "^2.2.2",
     "@nuxtjs/color-mode": "^3.1.8",
     "@typescript-eslint/eslint-plugin": "^7.16.1",
     "@typescript-eslint/parser": "^7.16.1",
+    "element-plus": "2.7.7",
     "eslint": "9.7.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "husky": "8.0.1",

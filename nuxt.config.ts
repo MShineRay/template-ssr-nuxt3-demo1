@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     'ant-design-vue/dist/antd.css',
   ],
 
-  modules: ['@nuxt/content', '@nuxtjs/color-mode'],
+  modules: ['@nuxt/content', '@nuxtjs/color-mode', '@element-plus/nuxt'],
 
   app: {
     baseURL,

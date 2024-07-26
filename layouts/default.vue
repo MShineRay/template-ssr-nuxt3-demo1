@@ -1,14 +1,13 @@
 <template>
-  <div class="app-box">
+  <div class="app-box layout-default">
     <AppNav></AppNav>
-    <div>默认布局。</div>
-    <NuxtLink to="/">返回首页</NuxtLink>
-    <slot />
+    <Main></Main>
   </div>
 </template>
 <script setup>
 import headConfig from '~/assets/data/head.js'
 import AppNav from '~/components/global/AppNav.vue'
+import Hello from '~/components/Hello.vue'
 
 const route = useRoute()
 const head = route.meta.head || {}

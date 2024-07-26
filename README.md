@@ -33,6 +33,7 @@
 - [eslint](https://eslint.nodejs.cn/docs/latest/use/getting-started)
 - [stylelint](https://www.stylelint.cn/)
 - [element-plus](https://element-plus.org/zh-CN/guide/installation.html)
+  - [element-plus-nuxt](https://github.com/element-plus/element-plus-nuxt)
 - [vant](https://vant-ui.github.io/vant/#/zh-CN/)
 - [normalize.css](https://github.com/necolas/normalize.css)
 - [pm2 中文网](https://pm2.fenxianglu.cn/docs/start)
