@@ -11,14 +11,14 @@
     <Comments />
 
     <!-- 这将在服务器端渲染 "span" 元素 -->
-    <ClientOnly fallbackTag="span">
-      <!-- 此组件仅在客户端渲染 -->
-      <Comments />
-      <template #fallback>
-        <!-- 这将在服务器端渲染 -->
-        <p>Loading comments...</p>
-      </template>
-    </ClientOnly>
+    <!--    <ClientOnly fallbackTag="span">-->
+    <!-- 此组件仅在客户端渲染 -->
+    <Comments />
+    <!--      <template #fallback>-->
+    <!--        &lt;!&ndash; 这将在服务器端渲染 &ndash;&gt;-->
+    <!--        <p>Loading comments...</p>-->
+    <!--      </template>-->
+    <!--    </ClientOnly>-->
 
     <!-- 此组件将在客户端渲染 -->
     <NuxtClientFallback fallback-tag="span">
@@ -33,12 +33,16 @@
     <Hello></Hello>
 
     <button @click="open = true">打开模态框</button>
-    <Teleport to="body">
-      <div v-if="open" class="modal">
-        <p>来自模态框的问候！</p>
-        <button @click="open = false">关闭</button>
-      </div>
-    </Teleport>
+
+    <ClientOnly>
+      <!--ClientOnly包括Teleport 避免切换布局报错-->
+      <Teleport to="body">
+        <div v-if="open" class="modal">
+          <p>来自模态框的问候！</p>
+          <button @click="open = false">关闭</button>
+        </div>
+      </Teleport>
+    </ClientOnly>
 
     <el-button @click="ElMessage('hello')">button</el-button>
     <ElButton :icon="ElIconEditPen" type="success">button</ElButton>
@@ -46,7 +50,5 @@
   </div>
 </template>
 <script setup>
-import Hello from '~/components/Hello.vue'
-
-const props = defineProps(['pdate'])
+const open = ref(false)
 </script>

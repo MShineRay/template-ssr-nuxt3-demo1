@@ -1,13 +1,16 @@
 <template>
   <div class="app">
-    <NuxtLayout> </NuxtLayout>
+    <NuxtLayout :name="layoutName"></NuxtLayout>
   </div>
 </template>
 
 <script setup lang="ts">
 import 'normalize.css'
-import Hello from '~/components/Hello.vue'
-const open = ref(false)
+const layoutState = useLayout()
+const layoutName = computed(() => {
+  return layoutState.value.type
+})
+watchEffect(() => console.error('app.vue layoutName:', layoutName))
 </script>
 
 <style lang="css">

@@ -1,3 +1,3 @@
 export default defineNitroPlugin((nitroApp: any) => {
-  console.log('Nitro plugin', nitroApp)
+  console.log('Nitro plugin')
 })
