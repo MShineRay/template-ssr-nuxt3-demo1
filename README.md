@@ -25,7 +25,7 @@
 
 ## Reference
 
-- [nuxt](https://nuxt.com.cn/docs/guide/directory-structure/pages)
+- [nuxt](https://nuxt.com.cn/docs/getting-started/styling)
 - [vue3](https://vuejs.org/guide/introduction.html)
 - [vue-router](https://router.vuejs.org/zh/introduction.html)
 - [pina](https://pinia.vuejs.org/zh/introduction.html)
@@ -37,3 +37,6 @@
 - [vant](https://vant-ui.github.io/vant/#/zh-CN/)
 - [normalize.css](https://github.com/necolas/normalize.css)
 - [pm2 中文网](https://pm2.fenxianglu.cn/docs/start)
+- [cssnano](https://github.com/cssnano/cssnano)
+- [unocss](https://unocss.dev/integrations/nuxt)
+- [原子化 CSS (Atomic CSS)](https://antfu.me/posts/reimagine-atomic-css-zh)

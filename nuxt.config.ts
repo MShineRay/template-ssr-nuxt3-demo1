@@ -111,6 +111,14 @@ export default defineNuxtConfig({
         },
       },
     },
+    vue: {
+      // https://nuxt.com.cn/docs/api/nuxt-config#vue
+      customElement: true,
+    },
+    vueJsx: {
+      // https://nuxt.com.cn/docs/api/nuxt-config#vuejsx
+      mergeProps: true,
+    },
   },
 
   compatibilityDate: '2024-07-22',
