@@ -7,7 +7,6 @@ import { fileURLToPath } from 'url'
 import { dirname, join, resolve } from 'path'
 // @ts-ignore
 import fs from 'fs'
-// @ts-ignore
 const currentDir = dirname(fileURLToPath(import.meta.url))
 console.log('currentDir: ', currentDir)
 // @ts-ignore
@@ -20,7 +19,7 @@ export default defineNuxtConfig({
     'ant-design-vue/dist/antd.css',
   ],
 
-  modules: ['@nuxt/content', '@nuxtjs/color-mode', '@element-plus/nuxt'],
+  modules: ['@nuxt/content', '@nuxtjs/color-mode', '@element-plus/nuxt', '@nuxt/eslint'],
 
   app: {
     baseURL,
@@ -157,6 +156,13 @@ export default defineNuxtConfig({
     https: {
       key: fs.readFileSync(resolve(__dirname, 'cert.key')),
       cert: fs.readFileSync(resolve(__dirname, 'cert.crt')),
+    },
+  },
+  eslint: {
+    // https://eslint.nuxt.com/packages/module
+    checker: true, // <---
+    config: {
+      stylistic: true, // 开启了 ESLint 风格检查，这样 ESLint 既会提示代码的语法问题，也会提示代码的格式问题。
     },
   },
 })
